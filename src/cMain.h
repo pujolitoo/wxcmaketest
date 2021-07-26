@@ -13,6 +13,7 @@ class cMain : public wxFrame
     public:
 
         wxButton *button1 = nullptr;
+        wxPanel *mainPanel = nullptr;
 
         void OnButtonClicked(wxCommandEvent &evt);
 };

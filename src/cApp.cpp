@@ -2,11 +2,26 @@
 
 wxIMPLEMENT_APP(cApp);
 
+void splash(int milis)
+{
+    wxBitmap bitmap;
+    wxSplashScreen* splash;
+    if (bitmap.LoadFile("../res/mesi.png", wxBITMAP_TYPE_PNG))
+    {
+        splash = new wxSplashScreen(bitmap,
+            wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,
+            milis, NULL, -1, wxDefaultPosition, wxDefaultSize,
+            wxBORDER_SIMPLE|wxSTAY_ON_TOP);
+    }
+    wxYield();
+    wxSleep(2);
+}
 bool cApp::OnInit()
 {
+    wxInitAllImageHandlers();
     frame1 = new cMain();
-    frame1->SetMinSize(wxSize(800,600));
-    frame1->SetMaxSize(wxSize(800,600));
-    frame1->Show();
+    frame1->Center();
+    splash(2000);
+    frame1->Show(true);
     return true;
 }
