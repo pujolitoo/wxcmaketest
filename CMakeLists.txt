@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.18)
 set(CMAKE_RC_COMPILER "windres")
-set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 project(wxcmaketest)
 
 
@@ -14,7 +14,7 @@ set(SOURCES
 )
 add_subdirectory(libs/wxWidgets)
 
-IF(CMAKE_BUILD_TYPE MATCHES DEBUG)
+IF(CMAKE_BUILD_TYPE MATCHES Debug)
     message("debug mode")
     add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 ELSE()
