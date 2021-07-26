@@ -1,1 +1,2 @@
-./lib/wxWidgets
+lib/wxWidgets
+build
