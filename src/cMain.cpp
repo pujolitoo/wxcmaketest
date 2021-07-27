@@ -6,9 +6,9 @@ wxEND_EVENT_TABLE()
 
 cMain::cMain() : wxFrame(nullptr, wxID_ANY, "hola", wxPoint(30, 30), wxSize(800, 600), wxMINIMIZE_BOX | wxSYSTEM_MENU | wxCAPTION | wxCLOSE_BOX | wxCLIP_CHILDREN | wxBORDER_SIMPLE)
 {
-    this->SetBackgroundColour(* wxLIGHT_GREY);
+    this->SetBackgroundColour(* wxWHITE);
     mainPanel = new wxPanel(this, -1);
-    mainPanel->SetBackgroundColour(* wxBLUE);
+    mainPanel->SetBackgroundColour(* wxWHITE);
     button1 = new wxButton(mainPanel, 10001, "click me", wxPoint(10, 10), wxSize(150, 50));
     wxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
     // expand contents, add 5px border on all sides:
